@@ -5,8 +5,7 @@ import {
   TableForeignKey,
 } from 'typeorm';
 
-// eslint-disable-next-line import/prefer-default-export
-export class AlterCategoryToCategoryId1607474553322
+export default class AlterCategoryToCategoryId1607474553322
   implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.dropColumn('transactions', 'category');

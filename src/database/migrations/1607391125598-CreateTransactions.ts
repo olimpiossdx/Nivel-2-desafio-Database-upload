@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-// eslint-disable-next-line import/prefer-default-export
-export class CreateTransactions1607391125598 implements MigrationInterface {
+export default class CreateTransactions1607391125598
+  implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
@@ -29,6 +29,8 @@ export class CreateTransactions1607391125598 implements MigrationInterface {
           {
             name: 'value',
             type: 'decimal',
+            precision: 10,
+            scale: 2,
           },
           {
             name: 'created_at',

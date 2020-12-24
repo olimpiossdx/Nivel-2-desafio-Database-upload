@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-// eslint-disable-next-line import/prefer-default-export
-export class CreateCategories1607391913070 implements MigrationInterface {
+export default class CreateCategories1607391913070
+  implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
